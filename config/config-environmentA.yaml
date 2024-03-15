@@ -1,0 +1,9 @@
+appPlain:
+  version:
+    branch: develop
+  app_example_param: "app_example_param_from_env_A"
+appHelm:
+  version:
+    branch: develop
+  app_example_param: "app_example_param_from_env_A"
+global_example_param: "global_example_value_form_env_A"

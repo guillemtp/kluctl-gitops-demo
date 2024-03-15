@@ -1,0 +1,9 @@
+appPlain:
+  version:
+    branch: master
+  app_example_param: "app_example_param_from_global_to_plain"
+appHelm:
+  version:
+    branch: master
+  app_example_param: "app_example_param_from_global_to_helm"
+global_example_param: "global_example_value"

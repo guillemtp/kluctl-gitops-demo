@@ -1,0 +1,22 @@
+apiVersion: gitops.kluctl.io/v1beta1
+kind: KluctlDeployment
+metadata:
+  name: app-plain
+  namespace: kluctl-system
+spec:
+  source:
+    url: https://github.com/guillemtp/kluctl-app-plain.git
+    ref: {{ appPlain.version | to_json }}
+  interval: 1m
+  timeout: 6m
+
+
+  args:
+    app_example_param: {{ appPlain.app_example_param }}
+    global_example_param: {{ global_example_param }}
+
+  target: {{ target.name }}
+
+  delete: true
+  prune: true
+

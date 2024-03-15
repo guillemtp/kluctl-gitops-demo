@@ -1,0 +1,15 @@
+targets:
+  - name: environmentA
+    context: arn:aws:eks:us-west-2:642577966190:cluster/cloudops-dev-eks-cluster
+  #   args:
+  #     kluctl_version: v2.21.0-snapshot-demo
+  # - name: environmentB
+  #   context: kluctl-demo
+  #   args:
+  #     kluctl_version: v2.21.0-snapshot-demo
+
+discriminator: workloads-{{ target.name }}
+
+args:
+  - name: kluctl_version
+    default: v2.21.0-devel
